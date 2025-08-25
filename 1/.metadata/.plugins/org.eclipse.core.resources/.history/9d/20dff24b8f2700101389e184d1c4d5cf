@@ -1,0 +1,19 @@
+package com.example.exception_management.handler;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+
+import com.example.exception_management.exception.BaseException;
+
+@ControllerAdvice
+public class GlobalExceptionHandler {
+
+	@ExceptionHandler(value = {BaseException.class})
+	public ResponseEntity<String> handleBaseException(BaseException exception) {
+		
+		return ResponseEntity.badRequest().body(exception.getMessage());
+		
+	}
+	
+}

@@ -1,0 +1,30 @@
+package com.example.exception_management;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.example.exception_management.dto.DtoEmployee;
+import com.example.exception_management.service.IEmployeeService;
+import com.example.exception_management.starter.ExceptionManagementApplication;
+
+@SpringBootTest(classes = { ExceptionManagementApplication.class })
+class ExceptionManagementApplicationTests {
+
+	@Autowired
+	private IEmployeeService employeeService;
+	
+	@Test
+	public void testFindEmployeeById() {
+		
+		DtoEmployee dtoEmployee = employeeService.findEmployeeById(3L);
+		
+		if (dtoEmployee != null) {
+			
+			System.out.println(dtoEmployee.getName());
+			
+		}
+		
+	}
+	
+}

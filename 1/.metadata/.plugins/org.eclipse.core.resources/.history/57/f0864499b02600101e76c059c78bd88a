@@ -1,0 +1,18 @@
+package com.example.exception_management.service.impl;
+
+import org.springframework.stereotype.Service;
+
+import com.example.exception_management.dto.DtoEmployee;
+import com.example.exception_management.service.IEmployeeService;
+
+@Service
+public class EmployeeServiceImpl implements IEmployeeService {
+
+	@Override
+	public DtoEmployee findEmployeeById(Long id) {
+		
+		return null;
+		
+	}
+
+}

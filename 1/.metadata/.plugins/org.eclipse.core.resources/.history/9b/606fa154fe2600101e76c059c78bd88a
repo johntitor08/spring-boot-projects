@@ -1,0 +1,15 @@
+package com.example.exception_management.controller.impl;
+
+import com.example.exception_management.controller.IRestEmployeeController;
+import com.example.exception_management.dto.DtoEmployee;
+
+public class RestEmployeeControllerImpl implements IRestEmployeeController {
+
+	@Override
+	public DtoEmployee findEmployeeById(Long id) {
+
+		return null;
+		
+	}
+
+}

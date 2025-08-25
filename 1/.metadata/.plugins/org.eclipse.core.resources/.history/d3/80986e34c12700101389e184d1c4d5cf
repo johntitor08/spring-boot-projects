@@ -1,0 +1,26 @@
+package com.example.exception_management.model;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class RootEntity<T> {
+
+	private boolean result;
+	private String errorMessage;
+	private T data;
+	
+	public <T> RootEntity<T> ok(T data) {
+		
+		RootEntity<T> rootEntity = new RootEntity<>();
+		rootEntity.setData(data);
+		rootEntity.setErrorMessage(null);
+		rootEntity.setResult(true);
+		return rootEntity;
+		
+	}
+	
+}

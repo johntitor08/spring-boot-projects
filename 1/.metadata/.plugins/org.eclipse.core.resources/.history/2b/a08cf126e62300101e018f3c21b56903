@@ -1,0 +1,9 @@
+package com.example.controller.impl;
+
+import com.example.controller.IEmployeeController;
+
+public class EmployeeControllerImpl implements IEmployeeController {
+
+	
+	
+}

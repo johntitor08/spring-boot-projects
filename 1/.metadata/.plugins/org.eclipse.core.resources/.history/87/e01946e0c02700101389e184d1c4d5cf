@@ -1,0 +1,16 @@
+package com.example.exception_management.model;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class RootEntity<T> {
+
+	private boolean result;
+	private String errorMessage;
+	private T data;
+	
+}
