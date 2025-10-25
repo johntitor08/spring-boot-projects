@@ -1,0 +1,18 @@
+package com.example.exception_management.handler;
+
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+
+import com.example.exception_management.exception.BaseException;
+
+@ControllerAdvice
+public class GlobalExceptionHandler {
+
+	@ExceptionHandler(value = {BaseException.class})
+	public void handleBaseException(BaseException exception) {
+		
+		exception.getMessage();
+		
+	}
+	
+}

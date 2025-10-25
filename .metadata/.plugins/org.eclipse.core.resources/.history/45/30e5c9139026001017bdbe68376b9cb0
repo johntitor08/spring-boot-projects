@@ -1,0 +1,5 @@
+package com.example.exception_management.model;
+
+public class Department {
+
+}

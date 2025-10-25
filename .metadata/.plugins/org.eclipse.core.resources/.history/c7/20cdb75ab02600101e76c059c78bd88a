@@ -1,0 +1,9 @@
+package com.example.exception_management.service;
+
+import com.example.exception_management.model.Employee;
+
+public interface IEmployeeService {
+	
+	public Employee findEmployeeById(Long id);
+
+}

@@ -1,0 +1,15 @@
+package com.example.exception_management;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.example.exception_management.starter.ExceptionManagementApplication;
+
+@SpringBootTest(classes = { ExceptionManagementApplication.class })
+class ExceptionManagementApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}

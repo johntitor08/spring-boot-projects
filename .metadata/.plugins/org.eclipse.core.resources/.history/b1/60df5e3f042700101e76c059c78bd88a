@@ -1,0 +1,5 @@
+package com.example.exception_management.exception;
+
+public class BaseException {
+
+}

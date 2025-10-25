@@ -1,0 +1,11 @@
+package com.example.exception_management.handler;
+
+import lombok.Data;
+
+@Data
+public class ApiError {
+
+	private Integer status;
+	private Exception<E> exception;
+	
+}

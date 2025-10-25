@@ -1,0 +1,12 @@
+package com.example.controller.impl;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.controller.IEmployeeController;
+
+@RestController
+public class EmployeeControllerImpl implements IEmployeeController {
+
+	
+	
+}

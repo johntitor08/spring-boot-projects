@@ -1,0 +1,43 @@
+package com.example.exception_management;
+
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.example.exception_management.dto.DtoEmployee;
+import com.example.exception_management.service.IEmployeeService;
+import com.example.exception_management.starter.ExceptionManagementApplication;
+
+@SpringBootTest(classes = { ExceptionManagementApplication.class })
+class ExceptionManagementApplicationTests {
+
+	@Autowired
+	private IEmployeeService employeeService;
+	
+	@BeforeEach
+	public void beforeEach() {
+		
+		System.out.println("Test metodundan önce çalışır.");
+		
+	}
+	
+	@Test
+	public void testFindEmployeeById() {
+		
+		DtoEmployee dtoEmployee = employeeService.findEmployeeById(1L);
+		assertNotNull(dtoEmployee);
+		
+	}
+	
+	@AfterEach
+	public void afterEach() {
+		
+		System.out.println("Test metodundan sonra çalışır.");
+		
+	}
+	
+}

@@ -1,0 +1,19 @@
+package com.example.exception_management.controller.impl;
+
+import com.example.exception_management.model.RootEntity;
+
+public class RestBaseController {
+
+	public static <T> RootEntity<T> ok(T data) {
+		
+		return RootEntity.ok(data);
+		
+	}
+	
+	public static <T> RootEntity<T> error(String errorMessage) {
+		
+		return RootEntity.error(errorMessage);
+		
+	}
+	
+}
