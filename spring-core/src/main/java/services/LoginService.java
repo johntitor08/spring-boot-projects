@@ -1,16 +1,20 @@
 package services;
 
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Autowired;
 
-import config.AppConfig;
-
+@Service
 public class LoginService {
-	
+
+	private final UserService userService;
+
+	@Autowired
+	public LoginService(UserService userService) {
+		this.userService = userService;
+	}
+
 	public void login() {
-		
-		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
-		UserService userService = context.getBean(UserService.class);
-		
+		userService.authenticate();
 	}
 
 }
